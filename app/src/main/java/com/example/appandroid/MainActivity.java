@@ -21,7 +21,8 @@ public class MainActivity extends AppCompatActivity {
         textView=findViewById(R.id.tv);
         textView.setText(Integer.toString(i));
         textView.setOnClickListener(v -> {
-            textView.setText("Bla");
+            textView.setText(Integer.toString(i++));
+
         });
 
 
