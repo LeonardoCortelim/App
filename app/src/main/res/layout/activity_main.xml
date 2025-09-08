@@ -14,7 +14,7 @@
         android:layout_gravity="center"
         android:layout_weight="0.1"
         android:text="Calculadora IMC"
-        android:textSize="20"/>
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/textView2"
@@ -50,7 +50,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0"
-        android:text="Button" />
+        android:text="Começar" />
 
     <ImageView
         android:id="@+id/imageView"
