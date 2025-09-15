@@ -11,26 +11,26 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.example.appandroid.ImcResultado;
-import com.example.appandroid.R;
-
 public class MainActivity extends AppCompatActivity {
     Button button;
-    EditText edPeso,edAltura;
+    EditText edPeso, edAltura;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
         button=findViewById(R.id.button4);
-        edPeso=findViewById(R.id.edPeso);
+        edPeso = findViewById(R.id.edPeso);
+        edAltura = findViewById(R.id.edAltura);
         button.setOnClickListener(v -> {
             Intent intent = new Intent(this, ImcResultado.class);
-            Bundle bundle= new Bundle();
-            Double peso= Double.parseDouble(edPeso.getText().toString());
-            Double altura= Double.parseDouble(edAltura.getText().toString());
-            bundle.putDouble("peso",peso);
-            bundle.putDouble("altura",altura);
+            Bundle bundle = new Bundle();
+            Double peso = Double.parseDouble(edPeso.getText().toString());
+            Double altura = Double.parseDouble(edAltura.getText().toString());
+            bundle.putDouble("peso", peso);
+            bundle.putDouble("altura", altura);
+            intent.putExtras(bundle);
             startActivity(intent);
         });
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
