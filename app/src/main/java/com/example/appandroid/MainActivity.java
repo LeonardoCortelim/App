@@ -32,16 +32,13 @@ public class MainActivity extends AppCompatActivity {
 
         gerar.setOnClickListener(v -> {
             var numero = 0;
-
             try {
                 numero = Integer.parseInt(texto.getText().toString());
             } catch (Exception e) {
                 System.out.println(e.toString());
             }
-
             var intent = new Intent(this, ActivityResultado.class);
             intent.putExtra("numero", numero);
-
             startActivity(intent);
         });
     }
