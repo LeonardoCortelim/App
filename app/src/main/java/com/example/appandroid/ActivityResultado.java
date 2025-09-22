@@ -18,30 +18,7 @@ public class ActivityResultado extends AppCompatActivity {
         setContentView(R.layout.activity_resultado);
 
         tvresultado = findViewById(R.id.tvresultado);
-
         var intent = getIntent();
-
-        Log.d("TESTE", "INTENT: " + intent.toString());
-
-        var num = intent.getIntExtra("NUMERO", 1);
-
-        Log.d("TESTE", "NUMERO: " + num);
-
-        var tabuada = gerarTabuada(num);
-
-        Log.d("TESTE", "TABUADA: " + tabuada);
-
-        tvresultado.setText(tabuada);
-    }
-
-    private String gerarTabuada(int numero) {
-        var stringBuilderTabuada = new StringBuilder();
-
-        for (int i = 1; i <= numero; i++) {
-            stringBuilderTabuada.append(numero).append(" X ").append(i).append(" = ").append(i * numero);
-            stringBuilderTabuada.append("\n");
-        }
-
-        return stringBuilderTabuada.toString();
+        var num = intent.getIntExtra("numero", 1);
     }
 }
