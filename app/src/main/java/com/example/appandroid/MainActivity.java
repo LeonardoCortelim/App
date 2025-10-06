@@ -14,7 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 import com.example.appandroid.R;
 
 public class MainActivity extends AppCompatActivity {
-    String[] nomes = new String[] {"Cézar", "José", "Rômulo", "Clara", "Camila", "Gustavo", "Bilu"};
+    String[] nomes = new String[] {"Cézar", "José", "Rômulo", "Rosa", "Prange", "Gustavo", "Bilu"};
     ListView listView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
