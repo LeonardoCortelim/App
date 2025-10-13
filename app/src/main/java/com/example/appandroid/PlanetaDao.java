@@ -18,4 +18,8 @@ public class PlanetaDao {
         arrayListPlanetas.add(new Planeta("Netuno",R.drawable.neptune));
 
     }
+
+    public ArrayList<Planeta> getPlanetas(){
+        return arrayListPlanetas;
+    }
 }

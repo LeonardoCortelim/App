@@ -22,8 +22,6 @@ public class MainActivity extends AppCompatActivity {
     ListView listView;
     Button btnadd;
 
-    EditText et;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
