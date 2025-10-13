@@ -10,7 +10,6 @@ public class PlanetaController {
     }
 
     public void addPlaneta(Planeta planeta) {
-        // Aqui você pode adicionar regras de negócio, validações etc.
         planetaDAO.addPlaneta(planeta);
     }
 
