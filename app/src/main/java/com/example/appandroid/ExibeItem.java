@@ -1,6 +1,7 @@
 package com.example.appandroid;
 
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +21,8 @@ public class ExibeItem extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        String titulo = getIntent().getStringExtra("titulo");
+        TextView textViewTitulo = findViewById(R.id.textViewExibeItem);
+        textViewTitulo.setText(titulo);
     }
 }
