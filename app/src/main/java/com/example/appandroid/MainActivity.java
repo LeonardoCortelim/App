@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
 
-        // ✅ Correct resource reference
+        // Correct resource reference
         setContentView(R.layout.activity_main);
 
         button = findViewById(R.id.buttonSalvar);
@@ -56,6 +56,9 @@ public class MainActivity extends AppCompatActivity {
 
             carregarListagem();
         });
+
+        listView.setOnItemClickListener((parent,view,position,id) -> {});
+
     }
 
     private void carregarListagem() {
