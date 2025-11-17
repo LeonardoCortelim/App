@@ -1,5 +1,6 @@
 package com.example.appandroid;
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -59,6 +60,9 @@ public class MainActivity extends AppCompatActivity {
 
         listView.setOnItemClickListener((parent,view,position,id) -> {
             String titulo = (String) parent.getItemAtPosition(position);
+            Intent intent = new Intent(MainActivity.this, ExibeItem.class);
+            intent.putExtra("titulo",titulo);
+            startActivity(intent);
 
         });
 
