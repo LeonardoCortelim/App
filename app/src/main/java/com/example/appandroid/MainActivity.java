@@ -57,7 +57,10 @@ public class MainActivity extends AppCompatActivity {
             carregarListagem();
         });
 
-        listView.setOnItemClickListener((parent,view,position,id) -> {});
+        listView.setOnItemClickListener((parent,view,position,id) -> {
+            String titulo = (String) parent.getItemAtPosition(position);
+
+        });
 
     }
 
